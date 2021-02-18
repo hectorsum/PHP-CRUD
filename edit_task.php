@@ -5,6 +5,7 @@
     $id = $_GET['id'];
     $query = "SELECT * FROM task WHERE id = {$id}";
     $response = mysqli_query($conn,$query);
+    
     if (mysqli_num_rows($response) == 1){ //* Checking if there's a single row response
       $row = mysqli_fetch_array($response);
       $title = $row['title'];
